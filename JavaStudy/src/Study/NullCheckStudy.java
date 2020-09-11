@@ -28,7 +28,7 @@ public class NullCheckStudy {
 			System.out.println("check3-1");
 		}
 		if(str2.equals("")) {//에러 : equals()는 공백검사만 가능하며 null검사는 불가능
-			System.out.println("check3-1");
+			System.out.println("check3-2");
 		}
 		
 		/* length() == 0 */
