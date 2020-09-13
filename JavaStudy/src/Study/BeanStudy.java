@@ -45,4 +45,51 @@ public class BeanStudy {
 	}
 	
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((memberAddress == null) ? 0 : memberAddress.hashCode());
+		result = prime * result + ((memberId == null) ? 0 : memberId.hashCode());
+		result = prime * result + memberNum;
+		result = prime * result + ((memberPass == null) ? 0 : memberPass.hashCode());
+		result = prime * result + ((memberPhone == null) ? 0 : memberPhone.hashCode());
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BeanStudy other = (BeanStudy) obj;
+		if (memberAddress == null) {
+			if (other.memberAddress != null)
+				return false;
+		} else if (!memberAddress.equals(other.memberAddress))
+			return false;
+		if (memberId == null) {
+			if (other.memberId != null)
+				return false;
+		} else if (!memberId.equals(other.memberId))
+			return false;
+		if (memberNum != other.memberNum)
+			return false;
+		if (memberPass == null) {
+			if (other.memberPass != null)
+				return false;
+		} else if (!memberPass.equals(other.memberPass))
+			return false;
+		if (memberPhone == null) {
+			if (other.memberPhone != null)
+				return false;
+		} else if (!memberPhone.equals(other.memberPhone))
+			return false;
+		return true;
+	}
+	
+	
 }
