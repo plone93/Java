@@ -1,15 +1,20 @@
 package Study;
 
-public class BeanStudy {
+import java.io.Serializable;
+
+public class BeanStudy implements Serializable{
 	private int memberNum;
 	private String memberId;
 	private String memberPass;
 	private String memberPhone;
 	private String memberAddress;
 	
+	
+	//getter,setter
 	public int getMemberNum() {
 		return memberNum;
 	}
+
 	public void setMemberNum(int memberNum) {
 		this.memberNum = memberNum;
 	}
@@ -38,13 +43,14 @@ public class BeanStudy {
 		this.memberAddress = memberAddress;
 	}
 	
+	//toString
 	@Override
 	public String toString() {
 		return "BeanStudy [memberNum=" + memberNum + ", memberId=" + memberId + ", memberPass=" + memberPass
 				+ ", memberPhone=" + memberPhone + ", memberAddress=" + memberAddress + "]";
 	}
 	
-	
+	//hashCode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -57,6 +63,7 @@ public class BeanStudy {
 		return result;
 	}
 	
+	//equals
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

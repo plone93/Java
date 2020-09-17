@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+
+<script>
+	var member = {
+				 memberNum : 1,
+				 memberId : "ABC123",
+				 memberName : "KIM" 	
+				 };
+				 
+	var result = JSON.stringify(member);
+	var data = JSON.parse(result);//인수로 받은 문자열을 자바스크립트 객체로 반환
+	
+	var date = new Date();//현재 날짜 객체 생성
+	alert(date);
+	var result = JSON.stringify(date);//인수로 받은 자바스크립트 객체를 문자열로 반환
+	alert(result);
+	var result = date.toJSON();//자바스크립트의 객체의 데이터를 JSON형식의 문자열로 반환
+	alert(result);
+
+</script>
+</html>
