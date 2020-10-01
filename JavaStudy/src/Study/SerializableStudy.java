@@ -13,6 +13,7 @@ public class SerializableStudy {
 		SerializableStudy study = new SerializableStudy();//클래스 객체 생성
 		study.serializableStudy();//직렬화 실행
 		study.deserializeStudy();//역직렬화 실행
+		
 	}
 	
 	public void serializableStudy() {
