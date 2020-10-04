@@ -4,8 +4,11 @@ package com.example.demo.controller;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class BoardController {
@@ -37,6 +40,13 @@ public class BoardController {
 		obj1.put("memberList", memberList);//JSON리스트를 첫번째 JSON객체에 넣음
 		
 		return obj1;
+	}
+	
+	@GetMapping("/viewBoard")
+	public String boardInsert(@RequestParam("boardNumber")Integer boardNumber) {
+		String url = "";//이동할 페이지
+		
+		return url;
 	}
 	
 
