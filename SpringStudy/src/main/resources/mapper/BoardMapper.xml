@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper	namespace="com.example.demo.mapper.BoardMapper"><!-- mapper의 위치를 지정 -->
+
+	<select id="selectBoard" resultType="com.example.demo.entity.BoardVO"><!-- 리턴 타입은 BoardVO -->
+		SELECT 
+			* 
+		FROM 
+			EXAMSITE
+		WHERE	
+			BOARDID = #{boardID} <!-- boardId가 DTO의 boardID이면서 -->
+			AND (BOARDTITLE = '%'||#{keyword}||'%' OR BOARDCONTENT = '%'||#{keyword}||'%') <!-- 제목이나 본문에 DTO의 keyword가 있다면 -->
+	</select>
+	
+</mapper>
